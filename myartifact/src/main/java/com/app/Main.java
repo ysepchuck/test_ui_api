@@ -1,20 +1,19 @@
-import javax.swing.*;
+package com.app;
+
+import com.app.Square;
 
 public class Main {
     public static void main(String[] args) {
         hello("World");
 
+        Square s = new Square(5);
 
-        double l = 6;
-        System.out.println(" площядь квадрата " + l + " = " + area (l));
+        System.out.println(" площядь квадрата " + s.l + " = " + s.area ());
     }
 
     public static void hello(String somebody) {
         System.out.println( "Hello " + somebody + "!");
 
-    }
-    public static double area (double len) {
-        return len * len;
     }
 
 }
