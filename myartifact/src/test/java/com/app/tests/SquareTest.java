@@ -1,5 +1,6 @@
-package com.app;
+package com.app.tests;
 
+import com.app.Square;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
