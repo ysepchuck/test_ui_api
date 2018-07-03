@@ -46,9 +46,6 @@ public class GroupHelper extends HelperBase {
     }
 
 
-    public int getGroupCoun() {
-        return wd.findElements(By.name("selected[]")).size();
-    }
 
     public void greateGroup(GroupData group) {
         initGroupCreation();
@@ -60,6 +57,11 @@ public class GroupHelper extends HelperBase {
     public boolean isThereAGroup() {
         return isElementPresent(By.name("selected[]"));
     }
+
+    public int getGroupCount() {
+        return wd.findElements(By.name("selected[]")).size();
+    }
+
     private boolean isElementPresent(By locator) {
         try {
             wd.findElement(locator);
