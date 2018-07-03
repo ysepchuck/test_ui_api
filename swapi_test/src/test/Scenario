@@ -1,0 +1,8 @@
+Feature: Search Jedi
+
+  Scenario: Search jedi by name id, and planet name
+      Given I prepare configuration
+      When I search Jedi by "id"
+      When I search planet by "name" and population "..."
+      Then I must check whether the movie "Attack of the Clones" belongs to "Luke Skywalker" and his planet
+
