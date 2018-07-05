@@ -4,6 +4,7 @@ import com.app.model.GroupData;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.Comparator;
 import java.util.List;
 
 public class GroupModificationTest extends TestBase {
@@ -13,7 +14,7 @@ public class GroupModificationTest extends TestBase {
         app.getNavigationHelper().goToGroupPage();
 
         if (! app.getGroupHelper().isThereAGroup()) {
-            app.getGroupHelper().greateGroup(new GroupData("test2", "test3", "test4"));
+            app.getGroupHelper().greateGroup(new GroupData("test2", null, null));
         }
         List<GroupData> before = app.getGroupHelper().getGroupList();
         app.getGroupHelper().selectGroup(before.size() -1);
@@ -27,7 +28,10 @@ public class GroupModificationTest extends TestBase {
 
         before.remove(before.size() -1);
         before.add(group);
-//        Assert.assertEquals(new HashSet<Object>(after), new HashSet<Object>(before));
+        Comparator<? super GroupData> byID = (g1,g2) -> Integer.compare(g1.getId(), g2.getId());
+        before.sort(byID);
+        after.sort(byID);
+        Assert.assertEquals(before, after);
 
     }
 

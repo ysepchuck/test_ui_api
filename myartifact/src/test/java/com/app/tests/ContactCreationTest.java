@@ -32,7 +32,7 @@ public class ContactCreationTest extends TestBase{
         wd.findElement(By.xpath("//form[@id='LoginForm']/input[3]")).click();
     }
 
-    @Test
+    @Test(enabled = false)
     public void ContactCreationTest() {
 
         goToContactPage();

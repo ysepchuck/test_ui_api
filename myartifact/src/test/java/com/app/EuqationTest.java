@@ -5,14 +5,14 @@ import org.testng.annotations.Test;
 
 public class EuqationTest {
 
-    @Test
+    @Test(enabled = false)
     public void test1() {
 //        Euqation e = new Euqation(1, 1,1);
         Euqation e = new Euqation(1,1,1);
         Assert.assertEquals(e.rootNumber(), 0);
         System.out.println("D = 0");
     }
-    @Test
+    @Test(enabled = false)
     public void test2() {
 //        Euqation e = new Euqation(1, 1,1);
         Euqation e = new Euqation(1,2,1);

@@ -17,7 +17,7 @@ public class FaceBookTest {
         wd.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
     
-    @Test
+    @Test(enabled = false)
     public void FaceBookTest() {
         wd.get("https://www.facebook.com/");
         wd.findElement(By.id("email")).click();
