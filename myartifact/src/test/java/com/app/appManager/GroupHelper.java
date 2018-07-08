@@ -1,6 +1,7 @@
 package com.app.appManager;
 
 import com.app.model.GroupData;
+import com.app.model.Groups;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -37,8 +38,8 @@ public class GroupHelper extends HelperBase {
         click(By.name("delete"));
     }
 
-    public void selectGroup(int index) {
-        wd.findElements(By.name("selected[]")).get(index).click();
+    public void selectGroupById(int id) {
+        wd.findElement(By.cssSelector("input[value = '" + id +"']")).click();
 
     }
 
@@ -58,19 +59,19 @@ public class GroupHelper extends HelperBase {
         submitGroupCreation();
         returnToGroupPage();
     }
-    public void modify(int index, GroupData group) {
-        selectGroup(index);
+    public void modify(GroupData group) {
+        selectGroupById(group.getId());
         initGroupModification();
         fillGroupForm(group);
         submitCroupModification();
         returnToGroupPage();
     }
-    public void delete(int index) {
-        selectGroup(index);
+
+    public void delete(GroupData group) {
+        selectGroupById(group.getId());
         deleteSelectedGrups();
         returnToGroupPage();
     }
-
     public boolean isThereAGroup() {
         return isElementPresent(By.name("selected[]"));
     }
@@ -98,4 +99,15 @@ public class GroupHelper extends HelperBase {
         }
         return groups;
     }
+    public Groups all() {
+        Groups groups = new Groups();
+        List<WebElement> elements = wd.findElements(By.cssSelector("span.group"));
+        for (WebElement element : elements) {
+            String name = element.getText();
+            int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
+            groups.add(new GroupData().withId(id).withName(name));
+        }
+        return groups;
+    }
+
 }
