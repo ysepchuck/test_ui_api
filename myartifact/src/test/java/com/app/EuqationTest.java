@@ -19,7 +19,7 @@ public class EuqationTest {
         Assert.assertEquals(e.rootNumber(), 1);
         System.out.println("D = 1");
 
-    }@Test
+    }@Test(enabled = false)
     public void test3() {
 //        Euqation e = new Euqation(1, 1,1);
         Euqation e = new Euqation(1,5,6);
