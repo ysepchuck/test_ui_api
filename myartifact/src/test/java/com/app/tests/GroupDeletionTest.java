@@ -7,7 +7,6 @@ import org.testng.annotations.Test;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.testng.Assert.assertEquals;
 
 public class GroupDeletionTest extends TestBase {
 
@@ -25,8 +24,7 @@ public class GroupDeletionTest extends TestBase {
         GroupData deleteGroup = before.iterator().next();
         app.group().delete(deleteGroup);
         Groups after = app.group().all();
-        assertEquals(after.size(), before.size() -1);
-
+        assertThat(app.group().count(), equalTo(before.size() -1));
 //        before.remove(deleteGroup);
         assertThat(after, equalTo(before.without(deleteGroup)));
 //        assertThat(after, equalTo(before));
