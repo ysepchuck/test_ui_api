@@ -14,6 +14,7 @@ public class ApplicationManager {
     private  NavigationHelper navigationHelper;
     private GroupHelper groupHelper;
     private String browser;
+    private DbHelper dbHelper;
 
     public ApplicationManager(String browser) {
 
@@ -22,6 +23,8 @@ public class ApplicationManager {
 
 
     public void init() {
+        dbHelper = new DbHelper();
+
         if (browser.equals(BrowserType.FIREFOX)) {
             System.setProperty("webdriver.gecko.driver", "/Users/vladimir/Documents/geckodriver");
             wd = new FirefoxDriver();
@@ -37,6 +40,8 @@ public class ApplicationManager {
         navigationHelper = new NavigationHelper(wd);
         sessionHelper = new SessionHelper(wd);
         sessionHelper.login("admin", "secret");
+
+
     }
 
 
@@ -51,5 +56,9 @@ public class ApplicationManager {
 
     public NavigationHelper goTo() {
         return navigationHelper;
+    }
+
+    public DbHelper db() {
+        return dbHelper;
     }
 }

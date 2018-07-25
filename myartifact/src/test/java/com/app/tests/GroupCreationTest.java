@@ -4,8 +4,6 @@ import com.app.model.GroupData;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.thoughtworks.xstream.XStream;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -21,7 +19,6 @@ import java.util.stream.Collectors;
 
 public class GroupCreationTest extends TestBase {
 
-    Logger logger = LoggerFactory.getLogger(ContactCreationTest.class);
 
     @DataProvider
     public Iterator<Object[]> validGroupsFromXml() throws IOException {
@@ -65,7 +62,6 @@ public class GroupCreationTest extends TestBase {
 
     @Test(dataProvider = "validGroupsFromJson")
     public void testGroupCreation (GroupData group) {
-        logger.info("start test testGroupCreation");
         String[] names = new String[]  {"test1", "test2", "test3"};
             app.goTo().groupPage();
             Set<GroupData> before = app.group().all();
@@ -76,8 +72,6 @@ public class GroupCreationTest extends TestBase {
             group.withId(after.stream().mapToInt((g) -> g.getId()).max().getAsInt());
             before.add(group);
             Assert.assertEquals(after,before);
-        logger.info("stop test testGroupCreation");
-
         }
 
 
