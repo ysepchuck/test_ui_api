@@ -12,6 +12,7 @@ import java.util.Date;
 import java.io.File;
 
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -27,7 +28,15 @@ public class BookHotel {
         System.setProperty("webdriver.chrome.driver", "/Users/vladimir/Documents/chromedriver");
         wd = new ChromeDriver();
         getTimeouts();
+        System.setProperty(ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY, System.getProperty("Users/vladimir/Documents/") + "/target/chromedriver.log");
+        System.setProperty(ChromeDriverService.CHROME_DRIVER_EXE_PROPERTY, System.getProperty("Users/vladimir/Documents/") + "/driver/chromedriver.exe");
+        ChromeDriverService service = new ChromeDriverService.Builder()
+                .usingAnyFreePort()
+                .withVerbose(true)
+                .build();
+        service.start();
     }
+
     
     @Test
     public void BookHotel() {

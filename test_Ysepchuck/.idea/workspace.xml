@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3da26fbe-cb24-4f59-8e17-63b43cd2e161" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../myartifact/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../myartifact/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../myartifact/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../myartifact/src/test/java/com/app/FaceBookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../myartifact/src/test/java/com/app/FaceBookTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BookHotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BookHotel.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -40,13 +40,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="295" />
+          <entry key="java" value="297" />
           <entry key="xml" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="295" />
+          <entry key="JAVA" value="297" />
           <entry key="XML" value="4" />
         </counts>
       </usages-collector>
@@ -66,8 +66,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/BookHotel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="48" column="135" selection-start-line="48" selection-start-column="135" selection-end-line="48" selection-end-column="135" />
+            <state relative-caret-position="176">
+              <caret line="31" column="120" selection-start-line="31" selection-start-column="120" selection-end-line="31" selection-end-column="120" />
               <folding>
                 <element signature="e#3661#3662#0" expanded="true" />
                 <element signature="e#3742#3743#0" expanded="true" />
@@ -161,12 +161,12 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533888816046" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1533893581620" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -248,9 +248,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BookHotel_BookHotel - 2018.08.10 at 10h 51m 38s.xml">
-      <configuration name="BookHotel.BookHotel" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="BookHotel_BookHotel - 2018.08.10 at 10h 56m 35s.xml">
       <configuration name="BookHotel.BookHotel" configurationId="JUnit" />
     </history-entry>
@@ -278,9 +275,13 @@
     <history-entry file="BookHotel_BookHotel - 2018.08.10 at 11h 07m 06s.xml">
       <configuration name="BookHotel.BookHotel" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="BookHotel_BookHotel - 2018.08.10 at 11h 13m 40s.xml">
+      <configuration name="BookHotel.BookHotel" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="823" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
       <window_info id="Designer" />
@@ -318,13 +319,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/BookHotel.java</url>
-          <line>52</line>
+          <line>61</line>
           <properties />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/BookHotel.java</url>
-          <line>49</line>
+          <line>58</line>
           <properties />
           <option name="timeStamp" value="9" />
         </line-breakpoint>
@@ -411,8 +412,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/BookHotel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="48" column="135" selection-start-line="48" selection-start-column="135" selection-end-line="48" selection-end-column="135" />
+        <state relative-caret-position="176">
+          <caret line="31" column="120" selection-start-line="31" selection-start-column="120" selection-end-line="31" selection-end-column="120" />
           <folding>
             <element signature="e#3661#3662#0" expanded="true" />
             <element signature="e#3742#3743#0" expanded="true" />
